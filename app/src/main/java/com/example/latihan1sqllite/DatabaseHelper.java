@@ -63,16 +63,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void delete(String name) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
-        String whereClause=KEY_NAME+"='"+name+"'";
-        sqLiteDatabase.delete(TABLE_NAME, whereClause, null);
+        String whereClause= KEY_NAME+"='"+name+"'";
+        sqLiteDatabase.delete( TABLE_NAME, whereClause, null);
     }
 
     public void update(PersonBean personBean) {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         ContentValues values = new ContentValues();
-        values.put(KEY_AGE, personBean.getAge());
-        String whereClause=KEY_NAME+"='"+personBean.getName()+"'";
-        sqLiteDatabase.update(TABLE_NAME, values, whereClause, null);
+        values.put ( KEY_AGE, personBean.getAge());
+        String whereClause = KEY_NAME +" = '"+personBean.getName()+"'";
+        sqLiteDatabase.update ( TABLE_NAME, values, whereClause, null);
     }
 
 }

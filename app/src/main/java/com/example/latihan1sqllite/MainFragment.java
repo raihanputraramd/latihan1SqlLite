@@ -88,8 +88,8 @@ public class MainFragment extends Fragment implements View.OnClickListener, Recy
         if (action.equals("Edit")) {
             edtName.setText(currentPerson.getName());
             edtName.setFocusable(false);
-            edtAge.setText(currentPerson.getAge() + "");
-            btnSubmit.setText("Edit");
+            edtAge.setText(currentPerson.getAge()+"");
+            btnSubmit.setText("Update");
         }
         if (action.equals("Delete")) {
             DatabaseHelper databaseHelper = new DatabaseHelper(context);
